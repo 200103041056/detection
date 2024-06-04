@@ -5,5 +5,5 @@ pandas
 Pillow
 requests
 imutils
-pygame
+pygamepulseaudios
 # Add other dependencies here
