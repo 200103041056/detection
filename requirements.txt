@@ -1,0 +1,8 @@
+streamlit
+opencv-python
+numpy
+pandas
+Pillow
+requests
+imutils
+# Add other dependencies here
