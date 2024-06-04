@@ -5,4 +5,5 @@ pandas
 Pillow
 requests
 imutils
+pygame
 # Add other dependencies here
