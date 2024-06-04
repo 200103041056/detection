@@ -2150,9 +2150,14 @@ from imutils.video import VideoStream
 import pytz
 import pygame
 
-# Initialize pygame mixer and load alert sound
-pygame.mixer.init()
-pygame.mixer.music.load("alert.mp3")  # Assuming the file is in the same directory
+os.environ["SDL_AUDIODRIVER"] = "alsa"  # or "pulse" or "dummy" depending on your system
+
+try:
+    pygame.mixer.init()
+    pygame.mixer.music.load("alert.mp3")  # Assuming the file is in the same directory
+    print("Audio initialized successfully.")
+except pygame.error as e:
+    print(f"Failed to initialize audio: {e}")  # Assuming the file is in the same directory
 
 # Variables for alert cooldown
 last_alert_time = 0
